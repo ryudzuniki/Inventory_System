@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://cwfjowg22pw3u"]
+
+[ext_resource type="Script" uid="uid://c4nw06lpxs1gw" path="res://addons/inventory_system/scripts/main/ui/inventory_ui.gd" id="1_f7ort"]
+[ext_resource type="Script" uid="uid://dixekdi8e1hy6" path="res://addons/inventory_system/scripts/main/logic/inventory_cell.gd" id="2_7gh7o"]
+[ext_resource type="Texture2D" uid="uid://d3jd2o7ew1jef" path="res://addons/inventory_system/assets/icons/sword.png" id="3_f7ort"]
+[ext_resource type="PackedScene" uid="uid://dlh8116qgp0qd" path="res://addons/inventory_system/scenes/world_object2D.tscn" id="4_4atg6"]
+[ext_resource type="Script" uid="uid://b2rber4ejexpm" path="res://addons/inventory_system/scripts/base/data/equipable_item.gd" id="4_lkqcd"]
+[ext_resource type="Script" uid="uid://ct5x7ymejfy3v" path="res://addons/inventory_system/scripts/base/data/consumable_item_info.gd" id="5_5kbsj"]
+[ext_resource type="Script" uid="uid://ygs8d8fx5d6k" path="res://addons/effects/scripts/effect_base.gd" id="5_7f81q"]
+[ext_resource type="Texture2D" uid="uid://c1d3c3ba1m4uh" path="res://addons/inventory_system/assets/icons/apple.png" id="5_7gh7o"]
+[ext_resource type="Texture2D" uid="uid://rjbbqnx667lv" path="res://addons/inventory_system/assets/icons/heal_effect_icon.png" id="5_x2xil"]
+[ext_resource type="Script" uid="uid://68jdyi4ip4ne" path="res://addons/inventory_system/scripts/main/logic/inventory.gd" id="6_ccffv"]
+[ext_resource type="PackedScene" uid="uid://bnn46wgjnsiy2" path="res://addons/inventory_system/scenes/inventory_tab.tscn" id="7_7f81q"]
+[ext_resource type="Texture2D" uid="uid://kkw5q20rrgcp" path="res://addons/inventory_system/assets/icons/arrow.png" id="7_om7bp"]
+[ext_resource type="PackedScene" uid="uid://dbuu6nopjorfl" path="res://addons/inventory_system/scenes/info_panel.tscn" id="8_eagdm"]
+[ext_resource type="Texture2D" uid="uid://c1xts3bmkcrx5" path="res://addons/inventory_system/assets/icons/bow.png" id="8_lkqcd"]
+[ext_resource type="Texture2D" uid="uid://c2sivnvhvi81k" path="res://addons/inventory_system/assets/icons/daggers.png" id="9_5kbsj"]
+[ext_resource type="PackedScene" uid="uid://cfmhk32xn0ys" path="res://addons/inventory_system/scenes/equip_panel.tscn" id="9_x2xil"]
+[ext_resource type="Texture2D" uid="uid://gvyj77tmtorh" path="res://addons/inventory_system/assets/icons/propelling_weapon.png" id="10_ccffv"]
+[ext_resource type="PackedScene" uid="uid://c0u07rnv3m24o" path="res://addons/inventory_system/scenes/action_panel.tscn" id="10_eefsw"]
+[ext_resource type="Texture2D" uid="uid://bv61nwegev2b" path="res://addons/inventory_system/assets/icons/kerosene_lantern.png" id="13_eefsw"]
+[ext_resource type="PackedScene" uid="uid://b7cdc1korvjxo" path="res://addons/inventory_system/scenes/effect_container.tscn" id="17_eagdm"]
+
+[sub_resource type="Resource" id="Resource_5g1bp"]
+script = ExtResource("4_lkqcd")
+item_id = "01"
+item_name = "Sword"
+item_icon = ExtResource("3_f7ort")
+item_description = "Heavy and Sharp"
+item_quantity = 1
+item_stack = 1
+item_scene = ExtResource("4_4atg6")
+metadata/_custom_type_script = "uid://b2rber4ejexpm"
+
+[sub_resource type="Resource" id="Resource_hu2sy"]
+script = ExtResource("2_7gh7o")
+data = SubResource("Resource_5g1bp")
+metadata/_custom_type_script = "uid://dixekdi8e1hy6"
+
+[sub_resource type="Resource" id="Resource_eagdm"]
+script = ExtResource("5_7f81q")
+effect_name = "heal"
+effect_time = 10.0
+effect_texture = ExtResource("5_x2xil")
+metadata/_custom_type_script = "uid://ygs8d8fx5d6k"
+
+[sub_resource type="Resource" id="Resource_qiibl"]
+script = ExtResource("5_5kbsj")
+effect = SubResource("Resource_eagdm")
+item_id = "02"
+item_name = "Apple"
+item_icon = ExtResource("5_7gh7o")
+item_description = "Return 10 HP"
+item_quantity = 1
+item_stack = 20
+item_scene = ExtResource("4_4atg6")
+metadata/_custom_type_script = "uid://ct5x7ymejfy3v"
+
+[sub_resource type="Resource" id="Resource_jmuut"]
+script = ExtResource("2_7gh7o")
+data = SubResource("Resource_qiibl")
+metadata/_custom_type_script = "uid://dixekdi8e1hy6"
+
+[sub_resource type="Resource" id="Resource_7v5vn"]
+script = ExtResource("4_lkqcd")
+type = 3
+item_id = "03"
+item_name = "Arrow"
+item_icon = ExtResource("7_om7bp")
+item_description = "Hits the enemy from a distance"
+item_quantity = 16
+item_stack = 20
+item_scene = ExtResource("4_4atg6")
+metadata/_custom_type_script = "uid://b2rber4ejexpm"
+
+[sub_resource type="Resource" id="Resource_wn3wp"]
+script = ExtResource("2_7gh7o")
+data = SubResource("Resource_7v5vn")
+metadata/_custom_type_script = "uid://dixekdi8e1hy6"
+
+[sub_resource type="Resource" id="Resource_3hm4b"]
+script = ExtResource("4_lkqcd")
+type = 1
+item_id = "04"
+item_name = "Bow"
+item_icon = ExtResource("8_lkqcd")
+item_description = "bow"
+item_quantity = 1
+item_stack = 1
+item_scene = ExtResource("4_4atg6")
+metadata/_custom_type_script = "uid://b2rber4ejexpm"
+
+[sub_resource type="Resource" id="Resource_fvbfy"]
+script = ExtResource("2_7gh7o")
+data = SubResource("Resource_3hm4b")
+metadata/_custom_type_script = "uid://dixekdi8e1hy6"
+
+[sub_resource type="Resource" id="Resource_xmft8"]
+script = ExtResource("4_lkqcd")
+type = 2
+item_id = "05"
+item_name = "Daggers"
+item_icon = ExtResource("9_5kbsj")
+item_description = "support when climbing"
+item_quantity = 1
+item_stack = 1
+item_scene = ExtResource("4_4atg6")
+metadata/_custom_type_script = "uid://b2rber4ejexpm"
+
+[sub_resource type="Resource" id="Resource_7yirn"]
+script = ExtResource("2_7gh7o")
+data = SubResource("Resource_xmft8")
+metadata/_custom_type_script = "uid://dixekdi8e1hy6"
+
+[sub_resource type="Resource" id="Resource_7f81q"]
+script = ExtResource("4_lkqcd")
+type = 5
+item_id = "06"
+item_name = "Knife"
+item_icon = ExtResource("10_ccffv")
+item_description = "throwable"
+item_quantity = 1
+item_stack = 1
+item_scene = ExtResource("4_4atg6")
+metadata/_custom_type_script = "uid://b2rber4ejexpm"
+
+[sub_resource type="Resource" id="Resource_ccffv"]
+script = ExtResource("2_7gh7o")
+data = SubResource("Resource_7f81q")
+metadata/_custom_type_script = "uid://dixekdi8e1hy6"
+
+[sub_resource type="Resource" id="Resource_x75tu"]
+script = ExtResource("4_lkqcd")
+type = 6
+item_id = "07"
+item_name = "Light"
+item_icon = ExtResource("13_eefsw")
+item_quantity = 1
+item_stack = 1
+item_scene = ExtResource("4_4atg6")
+metadata/_custom_type_script = "uid://b2rber4ejexpm"
+
+[sub_resource type="Resource" id="Resource_re6ov"]
+script = ExtResource("2_7gh7o")
+data = SubResource("Resource_x75tu")
+metadata/_custom_type_script = "uid://dixekdi8e1hy6"
+
+[sub_resource type="Resource" id="Resource_aut80"]
+script = ExtResource("6_ccffv")
+cells = Array[ExtResource("2_7gh7o")]([SubResource("Resource_hu2sy"), SubResource("Resource_jmuut"), SubResource("Resource_wn3wp"), SubResource("Resource_fvbfy"), SubResource("Resource_7yirn"), SubResource("Resource_ccffv"), SubResource("Resource_re6ov")])
+max_size = 25
+metadata/_custom_type_script = "uid://68jdyi4ip4ne"
+
+[node name="InventoryUI" type="Control" unique_id=826479375 node_paths=PackedStringArray("inventory_tab", "equipment_tab", "effect_container")]
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f7ort")
+inventory = SubResource("Resource_aut80")
+inventory_tab = NodePath("InventoryTab")
+equipment_tab = NodePath("InventoryTab/EquipPanel")
+effect_container = NodePath("InventoryTab/EffectContainer")
+
+[node name="InventoryTab" parent="." unique_id=195187847 node_paths=PackedStringArray("info_panel", "equip_panel") instance=ExtResource("7_7f81q")]
+layout_mode = 1
+info_panel = NodePath("InfoPanel")
+equip_panel = NodePath("EquipPanel")
+
+[node name="InfoPanel" parent="InventoryTab" unique_id=749411116 node_paths=PackedStringArray("action_panel") instance=ExtResource("8_eagdm")]
+layout_mode = 1
+offset_left = 364.0
+offset_top = -2.0
+offset_right = 364.0
+offset_bottom = -2.0
+action_panel = NodePath("../ActionPanel")
+
+[node name="EquipPanel" parent="InventoryTab" unique_id=540181641 instance=ExtResource("9_x2xil")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 427.0
+offset_top = 46.0
+offset_right = 491.0
+offset_bottom = 110.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="ActionPanel" parent="InventoryTab" unique_id=929575763 instance=ExtResource("10_eefsw")]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 231.0
+offset_right = 387.0
+offset_bottom = 231.0
+
+[node name="EffectContainer" parent="InventoryTab" unique_id=1826445204 instance=ExtResource("17_eagdm")]
+layout_mode = 0
+offset_left = 620.0
+offset_top = 5.0
+offset_right = 660.0
+offset_bottom = 45.0

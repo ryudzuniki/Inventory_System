@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dbuu6nopjorfl"]
+
+[ext_resource type="Script" uid="uid://da25kmwyidn2c" path="res://addons/inventory_system/scripts/main/ui/infopanel.gd" id="1_v43ig"]
+[ext_resource type="Texture2D" uid="uid://ci3rpd5x7qjfx" path="res://addons/inventory_system/assets/ui/cell.png" id="2_318ob"]
+[ext_resource type="Texture2D" uid="uid://bdulxnqkeanw3" path="res://addons/inventory_system/assets/ui/infotab_bg.png" id="2_mmv6n"]
+[ext_resource type="PackedScene" uid="uid://ehito80bxcab" path="res://addons/inventory_system/scenes/tab.tscn" id="4_ny5sw"]
+
+[node name="InfoPanel" type="Control" unique_id=862889612 node_paths=PackedStringArray("item_icon", "item_name", "item_desc", "info_tab")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_v43ig")
+item_icon = NodePath("Item_Icon")
+item_name = NodePath("Name")
+item_desc = NodePath("Description")
+info_tab = NodePath("InfoTab")
+
+[node name="InfotabBg" type="Sprite2D" parent="." unique_id=871496581]
+position = Vector2(128, 128)
+texture = ExtResource("2_mmv6n")
+
+[node name="InfoLabel" type="Label" parent="." unique_id=736392729]
+z_index = 1
+layout_mode = 0
+offset_left = 11.0
+offset_top = 126.0
+offset_right = 51.0
+offset_bottom = 149.0
+theme_override_font_sizes/font_size = 10
+text = "Info:"
+
+[node name="Name" type="Label" parent="." unique_id=1347953490]
+z_index = 1
+layout_mode = 0
+offset_left = 41.0
+offset_top = 146.0
+offset_right = 81.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 10
+text = "hj"
+
+[node name="NameLabel" type="Label" parent="." unique_id=1961095469]
+z_index = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 146.0
+offset_right = 47.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 10
+text = "Name:"
+
+[node name="Description" type="Label" parent="." unique_id=733947531]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 166.0
+offset_right = 157.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 8
+text = "jgjgfjfgjfjfgjfg"
+
+[node name="DescriptionLabel" type="Label" parent="." unique_id=562704969]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 166.0
+offset_right = 108.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 8
+text = "Description:"
+
+[node name="Cell_Icon" type="Sprite2D" parent="." unique_id=2052511725]
+position = Vector2(128, 78)
+texture = ExtResource("2_318ob")
+hframes = 2
+
+[node name="Item_Icon" type="TextureRect" parent="." unique_id=2066728542]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 106.0
+offset_top = 55.0
+offset_right = 150.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EquipTab" parent="." unique_id=657509616 instance=ExtResource("4_ny5sw")]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 0.0
+offset_right = 250.0
+offset_bottom = 24.0
+text = "Equipment"
+
+[node name="InfoTab" parent="." unique_id=610190693 instance=ExtResource("4_ny5sw")]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -1.0
+offset_right = 134.0
+offset_bottom = 23.0
+text = "Information"

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dgh3d06eh5mfy"]
+
+[ext_resource type="Texture2D" uid="uid://c1d3c3ba1m4uh" path="res://addons/inventory_system/assets/icons/apple.png" id="1_afetk"]
+[ext_resource type="Script" uid="uid://dhp423g0655xm" path="res://addons/inventory_system/scripts/main/ui/effect_cell.gd" id="1_fjeki"]
+
+[node name="EffectCell" type="TextureRect" unique_id=1453314938 node_paths=PackedStringArray("time_label")]
+custom_minimum_size = Vector2(16, 16)
+texture = ExtResource("1_afetk")
+expand_mode = 1
+script = ExtResource("1_fjeki")
+time_label = NodePath("Timer")
+
+[node name="Timer" type="Label" parent="." unique_id=1847141498]
+layout_mode = 0
+offset_top = 12.0
+offset_right = 16.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 8
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

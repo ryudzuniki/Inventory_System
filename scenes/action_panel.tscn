@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c0u07rnv3m24o"]
+
+[ext_resource type="Script" uid="uid://se5xj4cc4bkp" path="res://addons/inventory_system/scripts/main/ui/action_panel.gd" id="1_7j17a"]
+
+[node name="ActionPanel" type="Control" unique_id=1279446629 node_paths=PackedStringArray("_uselabel", "_throwlabel")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 135.0
+offset_bottom = 36.0
+script = ExtResource("1_7j17a")
+_uselabel = NodePath("Use")
+_throwlabel = NodePath("Throw")
+
+[node name="Use" type="Label" parent="." unique_id=433242270]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 4.0
+offset_right = 39.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 7
+text = "Consume"
+
+[node name="Throw" type="Label" parent="." unique_id=360776090]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 4.0
+offset_right = 91.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 7
+text = "Throw"

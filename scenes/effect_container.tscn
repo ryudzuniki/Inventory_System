@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b7cdc1korvjxo"]
+
+[ext_resource type="Script" uid="uid://buo07dpwwy86d" path="res://addons/inventory_system/scripts/main/ui/effect_container.gd" id="1_eyifh"]
+[ext_resource type="PackedScene" uid="uid://dgh3d06eh5mfy" path="res://addons/inventory_system/scenes/effect_cell.tscn" id="2_g6a65"]
+
+[node name="EffectContainer" type="GridContainer" unique_id=1826445204]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 16.0
+offset_bottom = 16.0
+script = ExtResource("1_eyifh")
+effect_cell_scene = ExtResource("2_g6a65")

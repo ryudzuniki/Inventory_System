@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ccuorwgply5p7"]
+
+[ext_resource type="PackedScene" uid="uid://cwfjowg22pw3u" path="res://addons/inventory_system/scenes/inventory_ui.tscn" id="1_h71ir"]
+[ext_resource type="PackedScene" uid="uid://cqueceq1dykr4" path="res://addons/character/scenes/character.tscn" id="2_6dm8l"]
+
+[node name="Demo" type="Node2D" unique_id=508133815]
+
+[node name="InventoryUI" parent="." unique_id=826479375 node_paths=PackedStringArray("character") instance=ExtResource("1_h71ir")]
+offset_left = -1.0
+offset_right = -1.0
+character = NodePath("../Character")
+
+[node name="Character" parent="." unique_id=171144261 instance=ExtResource("2_6dm8l")]
+health_points = 100.0
+stamina_points = 100.0
+level = 1.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2036954690]
+position = Vector2(311, 181)
+zoom = Vector2(1.7, 1.7)

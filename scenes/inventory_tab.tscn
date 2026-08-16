@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bnn46wgjnsiy2"]
+
+[ext_resource type="Script" uid="uid://dpco7h17h21t0" path="res://addons/inventory_system/scripts/main/ui/inventory_tab.gd" id="1_hfrme"]
+[ext_resource type="PackedScene" uid="uid://c1ivew76d5whg" path="res://addons/inventory_system/scenes/inventory_cell_ui.tscn" id="2_6vuke"]
+[ext_resource type="Texture2D" uid="uid://rl242ys1ksd7" path="res://addons/inventory_system/assets/ui/invtab_bg.png" id="3_xe8u4"]
+
+[node name="InventoryTab" type="Control" unique_id=195187847 node_paths=PackedStringArray("cell_grid")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hfrme")
+cell_scene = ExtResource("2_6vuke")
+cell_grid = NodePath("GridContainer")
+separation = 70
+
+[node name="InvtabBg" type="Sprite2D" parent="." unique_id=2066428835]
+position = Vector2(182, 182)
+texture = ExtResource("3_xe8u4")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1878327610]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+offset_left = 42.0
+offset_top = 42.0
+offset_right = 106.0
+offset_bottom = 106.0
+columns = 5

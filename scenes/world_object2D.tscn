@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dlh8116qgp0qd"]
+
+[ext_resource type="Script" uid="uid://suvcujg48ai3" path="res://addons/inventory_system/scripts/base/2d/base_item2d.gd" id="1_4dgf1"]
+
+[node name="WorldObject2d" type="Node2D" unique_id=1603717984 node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_4dgf1")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://suvcujg48ai3"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=923664552]

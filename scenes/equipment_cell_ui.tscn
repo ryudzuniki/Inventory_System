@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bsigtfwp603ks"]
+
+[ext_resource type="Script" uid="uid://ddlv2yf5rok8x" path="res://addons/inventory_system/scripts/main/ui/equipmentcellui.gd" id="1_3n4lg"]
+[ext_resource type="Texture2D" uid="uid://565w7gxvrgoh" path="res://addons/inventory_system/assets/ui/eq_cell.png" id="2_wn3wp"]
+
+[node name="EquipmentCellUI" type="Control" unique_id=1007532520 node_paths=PackedStringArray("slot_type_label", "type_sprite", "icon", "cell_sprite")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3n4lg")
+slot_type_label = NodePath("Quantity")
+type_sprite = NodePath("Sprite2D/Template")
+icon = NodePath("Icon")
+cell_sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://cyjs7iar8fx1y"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=762622639]
+texture = ExtResource("2_wn3wp")
+hframes = 2
+
+[node name="Template" type="Sprite2D" parent="Sprite2D" unique_id=1669461301]
+modulate = Color(0.50980395, 0.50980395, 0.50980395, 0.33333334)
+
+[node name="Icon" type="TextureRect" parent="." unique_id=754161965]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Quantity" type="Label" parent="." unique_id=779431786]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 21.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 8
+text = "20"

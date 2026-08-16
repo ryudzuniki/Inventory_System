@@ -1,0 +1,203 @@
+[gd_scene format=3 uid="uid://cfmhk32xn0ys"]
+
+[ext_resource type="Script" uid="uid://b5418n6oqm6ol" path="res://addons/inventory_system/scripts/main/ui/equip_panel.gd" id="1_qkwes"]
+[ext_resource type="PackedScene" uid="uid://bsigtfwp603ks" path="res://addons/inventory_system/scenes/equipment_cell_ui.tscn" id="1_t7lqg"]
+[ext_resource type="Script" uid="uid://cu2cf2h5ckbro" path="res://addons/inventory_system/scripts/main/logic/equip_cell.gd" id="2_mlkej"]
+[ext_resource type="PackedScene" uid="uid://ehito80bxcab" path="res://addons/inventory_system/scenes/tab.tscn" id="3_re6ov"]
+[ext_resource type="Texture2D" uid="uid://b6hw2loqd63s7" path="res://addons/inventory_system/assets/ui/equiptab_bg.png" id="4_rke8e"]
+
+[sub_resource type="Resource" id="Resource_kwxm6"]
+script = ExtResource("2_mlkej")
+metadata/_custom_type_script = "uid://cu2cf2h5ckbro"
+
+[sub_resource type="Resource" id="Resource_ibi5r"]
+script = ExtResource("2_mlkej")
+slot_type = 2
+metadata/_custom_type_script = "uid://cu2cf2h5ckbro"
+
+[sub_resource type="Resource" id="Resource_geiuy"]
+script = ExtResource("2_mlkej")
+slot_type = 4
+metadata/_custom_type_script = "uid://cu2cf2h5ckbro"
+
+[sub_resource type="Resource" id="Resource_4nqy3"]
+script = ExtResource("2_mlkej")
+slot_type = 1
+metadata/_custom_type_script = "uid://cu2cf2h5ckbro"
+
+[sub_resource type="Resource" id="Resource_41t8g"]
+script = ExtResource("2_mlkej")
+slot_type = 3
+metadata/_custom_type_script = "uid://cu2cf2h5ckbro"
+
+[sub_resource type="Resource" id="Resource_4w461"]
+script = ExtResource("2_mlkej")
+slot_type = 4
+metadata/_custom_type_script = "uid://cu2cf2h5ckbro"
+
+[sub_resource type="Resource" id="Resource_scmu2"]
+script = ExtResource("2_mlkej")
+slot_type = 5
+metadata/_custom_type_script = "uid://cu2cf2h5ckbro"
+
+[sub_resource type="Resource" id="Resource_buqnc"]
+script = ExtResource("2_mlkej")
+slot_type = 6
+metadata/_custom_type_script = "uid://cu2cf2h5ckbro"
+
+[sub_resource type="Resource" id="Resource_pmnbg"]
+script = ExtResource("2_mlkej")
+slot_type = 4
+metadata/_custom_type_script = "uid://cu2cf2h5ckbro"
+
+[node name="EquipPanel" type="GridContainer" unique_id=5766068 node_paths=PackedStringArray("equip_tab", "hp", "sp", "stn", "lvl", "exp")]
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+script = ExtResource("1_qkwes")
+separation_x = 70
+separation_y = 49
+equip_tab = NodePath("EquiptabBg/EquipTab")
+hp = NodePath("EquiptabBg/HPLabel/HP")
+sp = NodePath("EquiptabBg/SPLabel/SP")
+stn = NodePath("EquiptabBg/STNLabel/STN")
+lvl = NodePath("EquiptabBg/LVLLabel/LVL")
+exp = NodePath("EquiptabBg/ExpLabel/STN")
+
+[node name="EquiptabBg" type="Sprite2D" parent="." unique_id=554649940]
+position = Vector2(67, 80)
+texture = ExtResource("4_rke8e")
+
+[node name="InfoTab" parent="EquiptabBg" unique_id=610190693 instance=ExtResource("3_re6ov")]
+offset_left = -123.0
+offset_top = -128.0
+offset_right = 5.0
+offset_bottom = -104.0
+text = "Information"
+
+[node name="EquipTab" parent="EquiptabBg" unique_id=219756075 instance=ExtResource("3_re6ov")]
+offset_left = -7.0
+offset_top = -128.0
+offset_right = 121.0
+offset_bottom = -104.0
+text = "Equipment"
+
+[node name="HPLabel" type="Label" parent="EquiptabBg" unique_id=114450368]
+offset_left = -97.0
+offset_top = 88.0
+offset_right = -70.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 8
+text = "HP:"
+
+[node name="HP" type="Label" parent="EquiptabBg/HPLabel" unique_id=411149837]
+layout_mode = 0
+offset_left = 14.0
+offset_right = 54.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 8
+text = "100.0"
+
+[node name="SPLabel" type="Label" parent="EquiptabBg" unique_id=1749573424]
+offset_left = -59.0
+offset_top = 88.0
+offset_right = -47.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 8
+text = "SP:"
+
+[node name="SP" type="Label" parent="EquiptabBg/SPLabel" unique_id=640119651]
+layout_mode = 0
+offset_left = 14.0
+offset_right = 54.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 8
+text = "100.0"
+
+[node name="STNLabel" type="Label" parent="EquiptabBg" unique_id=1907741942]
+offset_left = -21.0
+offset_top = 88.0
+offset_right = 6.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 8
+text = "STN:"
+
+[node name="STN" type="Label" parent="EquiptabBg/STNLabel" unique_id=944244456]
+layout_mode = 0
+offset_left = 18.0
+offset_right = 58.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 8
+text = "100.0"
+
+[node name="LVLLabel" type="Label" parent="EquiptabBg" unique_id=780568982]
+offset_left = 21.0
+offset_top = 88.0
+offset_right = 48.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 8
+text = "LVL:"
+
+[node name="LVL" type="Label" parent="EquiptabBg/LVLLabel" unique_id=1818369637]
+layout_mode = 0
+offset_left = 18.0
+offset_right = 58.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 8
+text = "100.0"
+
+[node name="ExpLabel" type="Label" parent="EquiptabBg" unique_id=1653708690]
+offset_left = 65.0
+offset_top = 88.0
+offset_right = 82.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 8
+text = "EXP:"
+
+[node name="STN" type="Label" parent="EquiptabBg/ExpLabel" unique_id=2102793160]
+layout_mode = 0
+offset_left = 18.0
+offset_right = 58.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 8
+text = "100"
+
+[node name="MeleeWeapon" parent="." unique_id=1007532520 instance=ExtResource("1_t7lqg")]
+layout_mode = 2
+cell_data = SubResource("Resource_kwxm6")
+
+[node name="AddictionalEquipment" parent="." unique_id=390675424 instance=ExtResource("1_t7lqg")]
+layout_mode = 2
+cell_data = SubResource("Resource_ibi5r")
+
+[node name="Artefact1" parent="." unique_id=310455585 instance=ExtResource("1_t7lqg")]
+layout_mode = 2
+cell_data = SubResource("Resource_geiuy")
+
+[node name="RangedWeapon" parent="." unique_id=1180779488 instance=ExtResource("1_t7lqg")]
+layout_mode = 2
+cell_data = SubResource("Resource_4nqy3")
+
+[node name="Ammunition" parent="." unique_id=534109058 instance=ExtResource("1_t7lqg")]
+layout_mode = 2
+cell_data = SubResource("Resource_41t8g")
+
+[node name="Artefact2" parent="." unique_id=161288287 instance=ExtResource("1_t7lqg")]
+layout_mode = 2
+cell_data = SubResource("Resource_4w461")
+
+[node name="PropellingWeapon" parent="." unique_id=1190686772 instance=ExtResource("1_t7lqg")]
+layout_mode = 2
+cell_data = SubResource("Resource_scmu2")
+
+[node name="Decorative" parent="." unique_id=1289788987 instance=ExtResource("1_t7lqg")]
+layout_mode = 2
+cell_data = SubResource("Resource_buqnc")
+
+[node name="Artefact3" parent="." unique_id=2127526217 instance=ExtResource("1_t7lqg")]
+layout_mode = 2
+cell_data = SubResource("Resource_pmnbg")
