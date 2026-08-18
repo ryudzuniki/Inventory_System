@@ -57,13 +57,14 @@ A full-featured inventory system with gamepad support, equipment, and item drops
     |inventory_ui|Custom Class| Vars: character(Node2D), inventory(Inventory), inventory_tab(InventoryTab), equipment_tab(EquipPanel), effect_container(GridContainer), cursor_position(Vector2), grid_borders(Array[int])<br>&bull; _cursor_move():<br>&emsp;&#9643;`Args: cursor_pos(Vector2), action(String)`<br>&bull; _update_grid_borders()|
     |cell_base|Custom Class|Vars: icon(TextureRect), cell_sprite(Sprite2D)|
     |inventory_cell_ui|Custom Class|Vars: cell_data(InventoryCell), quantity_label(Label), cell_selected(signal)<br>&bull; _update_ui()<br>&bull; _selected()|
-    |equipment_cell_ui|Custom Class|Vars: cell_data(EquipmentCell), count_label(Label), type_texture(Texture2D), cell_selected(signal)<br>&bull; _equip():<br>&emsp;&#9643;`Args: item(BaseItemInfo)<br>&bull; _selected()<br>&bull; _unequip():<br>&emsp;&#9643;`Args: equipping_item(BaseItemInfo)`<br>&bull; try_equip()<br>&emsp;&#9643;`Args: item(BaseItemInfo)`<br>&bull; update_ui()|
-    ||||
-    ||||
-    ||||
-    ||||
-    ||||
-    ||||
-    ||||
-    ||||
-    ||||
+    |equipment_cell_ui|Custom Class|Vars: cell_data(EquipmentCell), count_label(Label), type_texture(Texture2D), cell_selected(signal)<br>&bull; _equip():<br>&emsp;&#9643;`Args: item(BaseItemInfo)`<br>&bull; _selected()<br>&bull; _unequip():<br>&emsp;&#9643;`Args: equipping_item(BaseItemInfo)`<br>&bull; try_equip()<br>&emsp;&#9643;`Args: item(BaseItemInfo)`<br>&bull; update_ui()|
+    |inventory_tab|Custom Class|Vars: cell_scene(PackedScene), cell_grid(GridContainer), separation(int), info_panel(InfoPanel), equip_panel(EquipPanel), currentTab(InventoryTabs), character(Node2D), current_cell(CellBase), inventory(Inventory), info_cells(Array[InventoryCellUI]), advanced_cells(Array[CellBase]), item_consumed(signal)<br>&bull; _focused_cell():<br>&emsp;&#9643;`Args: cursor_pos(Vector2), setup(bool)`<br>&bull; _setup_grid()<br>&bull; _throw()<br>&bull; _update()|
+    |infopanel|Custom Class|Vars: item_icon(TextureRect), item_name(Label), item_desc(Label), info_tab(Label), action_panel(Control)<br>&bull; _empty()<br>&bull;_show_info()<br>&emsp;&#9643;`Args: data(BaseItemInfo)`|
+    |equip_panel|Custom Class|Vars:|
+    |action_panel|Custom Class|Vars:|
+    |||Vars:|
+    |||Vars:|
+    |||Vars:|
+    |||Vars:|
+    |||Vars:|
+    |||Vars:|
