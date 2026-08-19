@@ -3,7 +3,7 @@
 - [English](#english)
 - [Русский](#russian)
 - [日本語](#japanese)
-
+- [Screenshots](#screens)
 ---
 
 <a name="english"></a>
@@ -540,3 +540,8 @@ UIセルの基底クラス。
 **tab.gd** (Label)  
 スプライト参照を持つシンプルなラベル。  
 - プロパティ: `sprite: Sprite2D`.
+<a name="Screenshots"></a>
+## Screens
+![Inventory(Info mode)](https://raw.githubusercontent.com/ryudzuniki/Inventory_System/main/screenshots/inventory_info_mode.png)
+![Inventory(Equip mode)](https://raw.githubusercontent.com/ryudzuniki/Inventory_System/main/screenshots/inventory_equip_mode.png)
+![Effect was added](https://raw.githubusercontent.com/ryudzuniki/Inventory_System/main/screenshots/effect_added.png)
